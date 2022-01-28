@@ -86,7 +86,7 @@
     //iOS13以后, 要获取地图, 才可以获取到WiFi信息
     [self.locationManager requestWhenInUseAuthorization];
     
-    NSLog(@"99--");
+    NSLog(@"99--00");
     
 }
 

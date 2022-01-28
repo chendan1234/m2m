@@ -28,8 +28,6 @@ static NSString *cellID = @"cellID";
     self.navigationItem.title = @"消息中心";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"全部已读" style:UIBarButtonItemStylePlain target:self action:@selector(allRead)];
     [self setupTableView];
-    
-    NSLog(@"消息中心3388999");
 }
 
 -(void)allRead{

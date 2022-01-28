@@ -1,0 +1,6 @@
+framework module TuyaSmartFeedbackKit {
+  umbrella header "TuyaSmartFeedbackKit-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

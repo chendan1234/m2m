@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NetFiveView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="527"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备连接网络超时" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obx-uM-AEr">
+                    <rect key="frame" x="137.66666666666669" y="60" width="138.66666666666669" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请排查以下问题后重试" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Q-2i-5lq">
+                    <rect key="frame" x="120.33333333333333" y="92" width="173.33333333333337" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 确认设备已重置, 灯在快闪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhk-ZD-Y06">
+                    <rect key="frame" x="111" y="152" width="192" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 检查Wi-Fi 是否为2.4GHz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtO-bS-xs1">
+                    <rect key="frame" x="111" y="182" width="186" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. 核对Wi-Fi 密码是否正确" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-We-Zj8">
+                    <rect key="frame" x="111" y="212" width="180" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sJ-Gy-oMC">
+                    <rect key="frame" x="107" y="462" width="200" height="45"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="3ns-0Z-tbW"/>
+                        <constraint firstAttribute="width" constant="200" id="Imf-oC-Tae"/>
+                    </constraints>
+                    <state key="normal" title="按步骤重试">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="reset:" destination="iN0-l3-epB" eventType="touchUpInside" id="g2A-mo-IsZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Rhk-ZD-Y06" firstAttribute="top" secondItem="m4Q-2i-5lq" secondAttribute="bottom" constant="40" id="31e-Dh-l0d"/>
+                <constraint firstItem="Uuw-We-Zj8" firstAttribute="leading" secondItem="VtO-bS-xs1" secondAttribute="leading" id="7KH-Dp-GfL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7sJ-Gy-oMC" secondAttribute="bottom" constant="20" id="AnH-Sm-jFv"/>
+                <constraint firstItem="7sJ-Gy-oMC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ikl-an-EgV"/>
+                <constraint firstItem="VtO-bS-xs1" firstAttribute="top" secondItem="Rhk-ZD-Y06" secondAttribute="bottom" constant="12" id="KId-uO-8Ge"/>
+                <constraint firstItem="Obx-uM-AEr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="PTS-yj-B5d"/>
+                <constraint firstItem="m4Q-2i-5lq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sep-mK-tot"/>
+                <constraint firstItem="VtO-bS-xs1" firstAttribute="leading" secondItem="Rhk-ZD-Y06" secondAttribute="leading" id="i8J-q2-ps1"/>
+                <constraint firstItem="Obx-uM-AEr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kmB-c7-gAu"/>
+                <constraint firstItem="Uuw-We-Zj8" firstAttribute="top" secondItem="VtO-bS-xs1" secondAttribute="bottom" constant="12" id="pMi-1E-DNQ"/>
+                <constraint firstItem="m4Q-2i-5lq" firstAttribute="top" secondItem="Obx-uM-AEr" secondAttribute="bottom" constant="12" id="r1A-3Q-y42"/>
+                <constraint firstItem="Rhk-ZD-Y06" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uv8-Up-0ff"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="44.927536231884062" y="151.22282608695653"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

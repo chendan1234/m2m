@@ -1,0 +1,6 @@
+framework module Pods_m2mSecurity {
+  umbrella header "Pods-m2mSecurity-umbrella.h"
+
+  export *
+  module * { export * }
+}

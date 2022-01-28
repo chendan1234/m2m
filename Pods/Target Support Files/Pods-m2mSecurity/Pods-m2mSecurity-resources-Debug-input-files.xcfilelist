@@ -1,0 +1,19 @@
+${PODS_ROOT}/Target Support Files/Pods-m2mSecurity/Pods-m2mSecurity-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/TYAlertView/TYAlertView.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TYAvatarEditKit/TYCropViewControllerBundle.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TYHybridContainer/TYHybridContainer.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TYNavigationController/TYNavigationRes.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TYSmartActionDialog/TYSmartActionDialog.bundle
+${PODS_ROOT}/TYSmartBusinessLibrary/TYSmartBusinessLibrary-3.23.5.4-tybizbundle/Assets/resources/cell_view_arrow@2x.png
+${PODS_ROOT}/TYSmartBusinessLibrary/TYSmartBusinessLibrary-3.23.5.4-tybizbundle/Assets/resources/cell_view_arrow@3x.png
+${PODS_CONFIGURATION_BUILD_DIR}/TYSmartBusinessLibrary/TPViews.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TYSmartBusinessLibrary/TYSmartBusinessLibraryRes.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TYUIKit/TYUIKitLibraryRes.bundle
+${PODS_ROOT}/TYUrlPredefined/TYUrlPredefined-0.2.102/Assets/resources/ty_route_config.json
+${PODS_CONFIGURATION_BUILD_DIR}/TYVideoPlayer/TYVideoPlayer.bundle
+${PODS_ROOT}/TuyaSmartBaseKit/ios/TuyaSmartBaseKit.framework/Versions/A/Resources/cerficate_v2
+${PODS_ROOT}/TuyaSmartBizCore/TuyaSmartBizCore-3.27.5.2/Assets/resources/custom.json
+${PODS_CONFIGURATION_BUILD_DIR}/TuyaSmartBizCore/TuyaSmartBizCore.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TuyaSmartCloudServiceBizBundle/TuyaSmartCloudServiceBizBundle.bundle
+${PODS_ROOT}/TuyaSmartDefaultPanelKit/ios/TuyaSmartDefaultPanelKit.framework/Versions/A/Resources/TuyaSmartDefaultPanel.bundle
+${PODS_ROOT}/TuyaSmartUtil/Carthage/Build/iOS/TuyaSmartUtil.framework/TuyaSmartUtil.bundle

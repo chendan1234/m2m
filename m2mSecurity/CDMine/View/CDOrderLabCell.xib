@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="160" id="KGk-i7-Jjw" customClass="CDOrderLabCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jH-QX-ugq">
+                        <rect key="frame" x="12" y="8" width="351" height="130"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单号: 202103021337582261" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-eN-Bfz">
+                                <rect key="frame" x="8" y="10" width="172" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余 12:32   待付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zih-yp-BuX">
+                                <rect key="frame" x="237" y="10" width="106" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7*24小时人工监控服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-eE-Ld8">
+                                <rect key="frame" x="8" y="41" width="167" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6个月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEE-10-jqG">
+                                <rect key="frame" x="8" y="69" width="43" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-03-02  13:37:58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR0-do-RrX">
+                                <rect key="frame" x="8" y="105" width="152" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="实付: 150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyS-PM-n1I">
+                                <rect key="frame" x="279" y="105" width="64" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NR0-do-RrX" firstAttribute="leading" secondItem="1jH-QX-ugq" secondAttribute="leading" constant="8" id="1zw-2Y-FIR"/>
+                            <constraint firstItem="Mqx-eE-Ld8" firstAttribute="leading" secondItem="1jH-QX-ugq" secondAttribute="leading" constant="8" id="8OP-Es-sPH"/>
+                            <constraint firstItem="VyS-PM-n1I" firstAttribute="centerY" secondItem="NR0-do-RrX" secondAttribute="centerY" id="9ep-ZZ-J1i"/>
+                            <constraint firstItem="JEE-10-jqG" firstAttribute="leading" secondItem="1jH-QX-ugq" secondAttribute="leading" constant="8" id="9qt-A9-C4l"/>
+                            <constraint firstItem="zMb-eN-Bfz" firstAttribute="top" secondItem="1jH-QX-ugq" secondAttribute="top" constant="10" id="BeW-9H-xnX"/>
+                            <constraint firstItem="Zih-yp-BuX" firstAttribute="top" secondItem="1jH-QX-ugq" secondAttribute="top" constant="10" id="Qu3-R8-71f"/>
+                            <constraint firstAttribute="height" constant="130" id="ScL-ST-Edn"/>
+                            <constraint firstItem="JEE-10-jqG" firstAttribute="top" secondItem="Mqx-eE-Ld8" secondAttribute="bottom" constant="8" id="ato-6x-fOq"/>
+                            <constraint firstItem="zMb-eN-Bfz" firstAttribute="leading" secondItem="1jH-QX-ugq" secondAttribute="leading" constant="8" id="hGa-wx-unK"/>
+                            <constraint firstItem="NR0-do-RrX" firstAttribute="top" secondItem="JEE-10-jqG" secondAttribute="bottom" constant="16" id="nL2-LQ-KHw"/>
+                            <constraint firstItem="Mqx-eE-Ld8" firstAttribute="top" secondItem="zMb-eN-Bfz" secondAttribute="bottom" constant="16" id="nLR-Pt-vlQ"/>
+                            <constraint firstAttribute="trailing" secondItem="VyS-PM-n1I" secondAttribute="trailing" constant="8" id="o7z-mP-mVg"/>
+                            <constraint firstAttribute="trailing" secondItem="Zih-yp-BuX" secondAttribute="trailing" constant="8" id="vFw-go-QJK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="1jH-QX-ugq" secondAttribute="trailing" constant="12" id="2bQ-1n-sN4"/>
+                    <constraint firstItem="1jH-QX-ugq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="w0Y-aH-Tb7"/>
+                    <constraint firstItem="1jH-QX-ugq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="yfW-UF-J0I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <connections>
+                <outlet property="createTimeLab" destination="NR0-do-RrX" id="kTh-Q1-EPp"/>
+                <outlet property="moneyLab" destination="VyS-PM-n1I" id="oSi-VP-Bzz"/>
+                <outlet property="orderNumLab" destination="zMb-eN-Bfz" id="BeJ-nf-fcG"/>
+                <outlet property="serviceNameLab" destination="Mqx-eE-Ld8" id="pwo-Sa-JER"/>
+                <outlet property="statusLab" destination="Zih-yp-BuX" id="kjJ-LG-YIR"/>
+                <outlet property="timeLab" destination="JEE-10-jqG" id="2Zx-vb-ICI"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="CDQuickCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3p-4y-BkQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menling" translatesAutoresizingMaskIntoConstraints="NO" id="RBJ-xh-WaO">
+                                <rect key="frame" x="18" y="10" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8gD-LW-P1D"/>
+                                    <constraint firstAttribute="height" constant="40" id="Gjj-0K-4t3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="门铃 - ABS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phl-y2-dcb">
+                                <rect key="frame" x="76" y="21" width="75" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已添加成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4D-W4-DvM">
+                                <rect key="frame" x="227.5" y="21" width="76.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RBJ-xh-WaO" firstAttribute="centerY" secondItem="T3p-4y-BkQ" secondAttribute="centerY" id="4Im-C0-Vl8"/>
+                            <constraint firstItem="m4D-W4-DvM" firstAttribute="centerY" secondItem="T3p-4y-BkQ" secondAttribute="centerY" id="hLm-16-hFp"/>
+                            <constraint firstAttribute="trailing" secondItem="m4D-W4-DvM" secondAttribute="trailing" constant="16" id="hPn-U7-IAu"/>
+                            <constraint firstItem="RBJ-xh-WaO" firstAttribute="leading" secondItem="T3p-4y-BkQ" secondAttribute="leading" constant="18" id="iPw-RU-V72"/>
+                            <constraint firstAttribute="height" constant="60" id="nmQ-J7-oTv"/>
+                            <constraint firstItem="phl-y2-dcb" firstAttribute="centerY" secondItem="T3p-4y-BkQ" secondAttribute="centerY" id="qUd-h0-gTl"/>
+                            <constraint firstItem="phl-y2-dcb" firstAttribute="leading" secondItem="RBJ-xh-WaO" secondAttribute="trailing" constant="8" symbolic="YES" id="wAB-AP-iob"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="T3p-4y-BkQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="68j-8Y-eNC"/>
+                    <constraint firstItem="T3p-4y-BkQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Cho-hv-Gmu"/>
+                    <constraint firstAttribute="trailing" secondItem="T3p-4y-BkQ" secondAttribute="trailing" id="SWi-ed-xTd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+            <connections>
+                <outlet property="iconImgV" destination="RBJ-xh-WaO" id="rgj-Bf-mXn"/>
+                <outlet property="nameLab" destination="phl-y2-dcb" id="PZx-XB-sap"/>
+            </connections>
+            <point key="canvasLocation" x="148" y="52"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="menling" width="23.5" height="40"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

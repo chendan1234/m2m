@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeManageViewController">
+            <connections>
+                <outlet property="myTableView" destination="MQJ-EL-jkg" id="S8X-EC-rHF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im2-Zm-Ha7">
+                    <rect key="frame" x="43" y="650" width="328" height="46"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="nnG-ex-Ao8"/>
+                    </constraints>
+                    <state key="normal" title="新建家庭">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="23"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buildHome:" destination="-1" eventType="touchUpInside" id="oFH-nw-Tv8"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MQJ-EL-jkg">
+                    <rect key="frame" x="0.0" y="16" width="414" height="618"/>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="i8M-ZZ-Br8"/>
+                        <outlet property="delegate" destination="-1" id="D8c-4D-g5E"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="im2-Zm-Ha7" secondAttribute="trailing" constant="43" id="0AL-QM-ghE"/>
+                <constraint firstItem="MQJ-EL-jkg" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="0h8-9t-ckD"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="MQJ-EL-jkg" secondAttribute="trailing" id="Gg2-cI-QzI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="im2-Zm-Ha7" secondAttribute="bottom" constant="40" id="S28-3B-0jQ"/>
+                <constraint firstItem="im2-Zm-Ha7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="43" id="eku-vT-zkD"/>
+                <constraint firstItem="MQJ-EL-jkg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="faj-P5-h8P"/>
+                <constraint firstItem="im2-Zm-Ha7" firstAttribute="top" secondItem="MQJ-EL-jkg" secondAttribute="bottom" constant="16" id="uQC-Hs-BDv"/>
+            </constraints>
+            <point key="canvasLocation" x="60.869565217391312" y="65.217391304347828"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

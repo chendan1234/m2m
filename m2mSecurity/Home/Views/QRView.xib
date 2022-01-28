@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QRView">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="364"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qWd-rr-Ond">
+                    <rect key="frame" x="10" y="10" width="260" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qWd-rr-Ond" secondAttribute="height" id="xBG-qN-iMv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码对准摄像头, 保持15-20cm距离" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjn-Zn-Kcl">
+                    <rect key="frame" x="10" y="276" width="260" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4D-hk-Oeg">
+                    <rect key="frame" x="10" y="303" width="260" height="45"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="T6L-od-0Ec"/>
+                    </constraints>
+                    <state key="normal" title="听到提示音">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tip:" destination="iN0-l3-epB" eventType="touchUpInside" id="syn-uX-MYY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="p4D-hk-Oeg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="HA9-CV-IJK"/>
+                <constraint firstItem="qWd-rr-Ond" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="IAg-Yz-g5R"/>
+                <constraint firstItem="pjn-Zn-Kcl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="UQs-al-nBn"/>
+                <constraint firstItem="qWd-rr-Ond" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="VFf-Kx-en7"/>
+                <constraint firstItem="pjn-Zn-Kcl" firstAttribute="top" secondItem="qWd-rr-Ond" secondAttribute="bottom" constant="6" id="Z5y-nU-Fkc"/>
+                <constraint firstItem="p4D-hk-Oeg" firstAttribute="top" secondItem="pjn-Zn-Kcl" secondAttribute="bottom" constant="10" id="ZX6-cv-JrH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pjn-Zn-Kcl" secondAttribute="trailing" constant="10" id="aLD-Dt-BTb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="p4D-hk-Oeg" secondAttribute="trailing" constant="10" id="drU-Yv-4Fg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qWd-rr-Ond" secondAttribute="trailing" constant="10" id="qU2-0m-CIf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="qrImgV" destination="qWd-rr-Ond" id="4P4-Ma-ONq"/>
+            </connections>
+            <point key="canvasLocation" x="-37.681159420289859" y="-157.33695652173915"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

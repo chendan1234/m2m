@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDChangePhoneOrEmailViewController">
+            <connections>
+                <outlet property="contentView" destination="rFT-vT-RY6" id="Cy8-jP-2Fz"/>
+                <outlet property="oldLab" destination="6JM-CE-moM" id="AME-Sg-SbI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="xinLab" destination="3Mh-X9-ke6" id="Kog-2m-Z5X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-vT-RY6">
+                    <rect key="frame" x="0.0" y="44" width="414" height="208"/>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="208" id="ZuL-es-eAx"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14A-Gs-WEk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="split" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-Xi-vz0">
+                            <rect key="frame" x="200" y="0.0" width="14" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="3Jw-UO-CpO"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.验证旧手机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JM-CE-moM">
+                            <rect key="frame" x="10" y="13.666666666666664" width="180" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="linkColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.设置新手机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-X9-ke6">
+                            <rect key="frame" x="224" y="13.666666666666664" width="180" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="d8Q-Xi-vz0" firstAttribute="leading" secondItem="6JM-CE-moM" secondAttribute="trailing" constant="10" id="7XY-QF-umK"/>
+                        <constraint firstItem="d8Q-Xi-vz0" firstAttribute="top" secondItem="14A-Gs-WEk" secondAttribute="top" id="BND-HA-0QG"/>
+                        <constraint firstItem="3Mh-X9-ke6" firstAttribute="centerY" secondItem="14A-Gs-WEk" secondAttribute="centerY" id="VOg-8b-2ZC"/>
+                        <constraint firstItem="d8Q-Xi-vz0" firstAttribute="centerX" secondItem="14A-Gs-WEk" secondAttribute="centerX" id="Xyk-QS-8Nt"/>
+                        <constraint firstItem="6JM-CE-moM" firstAttribute="leading" secondItem="14A-Gs-WEk" secondAttribute="leading" constant="10" id="ZHc-58-KVK"/>
+                        <constraint firstItem="3Mh-X9-ke6" firstAttribute="leading" secondItem="d8Q-Xi-vz0" secondAttribute="trailing" constant="10" id="bkB-Iy-0Qb"/>
+                        <constraint firstItem="6JM-CE-moM" firstAttribute="centerY" secondItem="14A-Gs-WEk" secondAttribute="centerY" id="edM-3H-KYG"/>
+                        <constraint firstAttribute="trailing" secondItem="3Mh-X9-ke6" secondAttribute="trailing" constant="10" id="p6l-Az-m6w"/>
+                        <constraint firstAttribute="height" constant="44" id="vQx-41-wmq"/>
+                        <constraint firstAttribute="bottom" secondItem="d8Q-Xi-vz0" secondAttribute="bottom" id="yrG-Pf-mXt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rFT-vT-RY6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Bgh-Wk-uId"/>
+                <constraint firstItem="14A-Gs-WEk" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Voa-dB-N4F"/>
+                <constraint firstItem="14A-Gs-WEk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="XMU-Ci-AUK"/>
+                <constraint firstItem="14A-Gs-WEk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="bst-tJ-wh1"/>
+                <constraint firstItem="rFT-vT-RY6" firstAttribute="top" secondItem="14A-Gs-WEk" secondAttribute="bottom" id="gi0-yf-9F2"/>
+                <constraint firstItem="rFT-vT-RY6" firstAttribute="top" secondItem="14A-Gs-WEk" secondAttribute="bottom" id="j1J-mz-6Ys"/>
+                <constraint firstItem="rFT-vT-RY6" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="zva-t9-Vmh"/>
+            </constraints>
+            <point key="canvasLocation" x="112" y="11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="split" width="16" height="44"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="MoreShareCell">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="667-9I-Fo5">
+                        <rect key="frame" x="61" y="69" width="295" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Bh3-To-fp6"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="xAB-fl-J7r">
+                        <rect key="frame" x="8" y="0.0" width="60" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="cIZ-HW-K8G"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yq" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-NJ-Yq4">
+                        <rect key="frame" x="316" y="0.0" width="24" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="TaH-aF-cR8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="门磁探测器-HS1DD-EFA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54F-0G-13s">
+                        <rect key="frame" x="68" y="0.0" width="248" height="70"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bbk-NJ-Yq4" firstAttribute="leading" secondItem="54F-0G-13s" secondAttribute="trailing" id="7og-xG-lZ2"/>
+                    <constraint firstItem="54F-0G-13s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8l5-FF-txQ"/>
+                    <constraint firstAttribute="bottom" secondItem="54F-0G-13s" secondAttribute="bottom" id="BYt-3x-Kei"/>
+                    <constraint firstAttribute="bottom" secondItem="bbk-NJ-Yq4" secondAttribute="bottom" id="Jky-Yw-Af6"/>
+                    <constraint firstItem="667-9I-Fo5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="61" id="KcD-aq-IsX"/>
+                    <constraint firstItem="xAB-fl-J7r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="M0g-DA-HcO"/>
+                    <constraint firstAttribute="trailing" secondItem="667-9I-Fo5" secondAttribute="trailing" id="MPH-uR-e0Y"/>
+                    <constraint firstAttribute="bottom" secondItem="667-9I-Fo5" secondAttribute="bottom" id="Mmh-5L-fRa"/>
+                    <constraint firstAttribute="bottom" secondItem="xAB-fl-J7r" secondAttribute="bottom" id="P5e-8R-BDT"/>
+                    <constraint firstItem="bbk-NJ-Yq4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="epD-xJ-nEs"/>
+                    <constraint firstItem="54F-0G-13s" firstAttribute="leading" secondItem="xAB-fl-J7r" secondAttribute="trailing" id="r1H-tn-Jv9"/>
+                    <constraint firstAttribute="trailing" secondItem="bbk-NJ-Yq4" secondAttribute="trailing" constant="16" id="vIt-TD-Zjb"/>
+                    <constraint firstItem="54F-0G-13s" firstAttribute="leading" secondItem="xAB-fl-J7r" secondAttribute="trailing" id="xj4-vt-4M0"/>
+                    <constraint firstItem="xAB-fl-J7r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yg2-T6-PvT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="iconImgV" destination="xAB-fl-J7r" id="db4-T1-v9o"/>
+                <outlet property="nameLab" destination="54F-0G-13s" id="dGF-uO-X1F"/>
+                <outlet property="selectImgV" destination="bbk-NJ-Yq4" id="m89-sD-AoU"/>
+            </connections>
+            <point key="canvasLocation" x="181.15942028985509" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="door" width="32" height="38"/>
+        <image name="yq" width="20" height="20"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

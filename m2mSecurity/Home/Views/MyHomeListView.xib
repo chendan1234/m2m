@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyHomeListView">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="273"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家庭列表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zM-EL-fMd">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Q0v-SJ-7q1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C29-OI-prZ">
+                    <rect key="frame" x="0.0" y="229" width="250" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jTH-xg-djt"/>
+                    </constraints>
+                    <state key="normal" title="家庭管理"/>
+                    <connections>
+                        <action selector="homeManageBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="GMI-zX-LpG"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-4x-Zpz">
+                    <rect key="frame" x="0.0" y="228" width="250" height="1"/>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="u16-VI-2fF"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-VJ-AST">
+                    <rect key="frame" x="0.0" y="40" width="250" height="188"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="VxT-ut-GNK"/>
+                        <outlet property="delegate" destination="-1" id="rZK-N1-a38"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qog-VJ-AST" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="32t-dA-2mA"/>
+                <constraint firstItem="Qog-VJ-AST" firstAttribute="top" secondItem="8zM-EL-fMd" secondAttribute="bottom" id="AiR-HC-vCK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="C29-OI-prZ" secondAttribute="bottom" id="P35-OW-aQy"/>
+                <constraint firstItem="8zM-EL-fMd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TdS-qu-48Y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="biQ-4x-Zpz" secondAttribute="trailing" id="ToL-WY-bni"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C29-OI-prZ" secondAttribute="trailing" id="XIk-Q7-HCI"/>
+                <constraint firstItem="biQ-4x-Zpz" firstAttribute="top" secondItem="Qog-VJ-AST" secondAttribute="bottom" id="a40-7p-kys"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8zM-EL-fMd" secondAttribute="trailing" id="a9H-Xe-OEN"/>
+                <constraint firstItem="biQ-4x-Zpz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dXv-U3-2E3"/>
+                <constraint firstItem="C29-OI-prZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gdu-sB-Gda"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qog-VJ-AST" secondAttribute="trailing" id="qVH-3c-k3h"/>
+                <constraint firstItem="8zM-EL-fMd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t88-gg-KPc"/>
+                <constraint firstItem="C29-OI-prZ" firstAttribute="top" secondItem="biQ-4x-Zpz" secondAttribute="bottom" id="tQj-XI-a4h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="myTableView" destination="Qog-VJ-AST" id="o86-qa-zm2"/>
+            </connections>
+            <point key="canvasLocation" x="-73.913043478260875" y="82.744565217391312"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

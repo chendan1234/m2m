@@ -1,0 +1,9 @@
+/* 
+  CDLanguage.strings
+  m2mSecurity
+
+  Created by chendan on 2021/11/17.
+  
+*/
+"home_status_off" = "离线";
+"home_status_on" = "在线";

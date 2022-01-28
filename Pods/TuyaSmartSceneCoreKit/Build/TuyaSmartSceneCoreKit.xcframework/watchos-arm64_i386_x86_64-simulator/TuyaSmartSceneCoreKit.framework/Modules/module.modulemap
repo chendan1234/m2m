@@ -1,0 +1,6 @@
+framework module TuyaSmartSceneCoreKit {
+  umbrella header "TuyaSmartSceneCoreKit-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

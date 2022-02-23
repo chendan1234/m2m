@@ -66,6 +66,7 @@
 #define KHaveNoti @"KHaveNoti"
 #define KUpdateExpireTime @"KUpdateExpireTime"
 #define KChangeUserIcon @"KChangeUserIcon"
+#define KRecNoti @"KRecNoti"
 
 
 

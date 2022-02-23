@@ -60,8 +60,14 @@
     //虚拟网关设备
     for (TuyaSecurityModeSettingItemModel *itemModel in model.virtualGateway) {
         TuyaSecurityDeviceRuleModel *ruleModel = [[TuyaSecurityDeviceRuleModel alloc] init];
+        NSMutableArray *deviceIds = [[NSMutableArray alloc] init];
+        for (TuyaSecurityModeSettingItemModel *subDeviceModel in itemModel.subDevices) {
+            if (subDeviceModel.allowSelect) {
+                [deviceIds addObject:subDeviceModel.deviceId];
+            }
+        }
+        ruleModel.deviceIds = deviceIds.copy;
         ruleModel.gatewayId = itemModel.deviceId;
-        ruleModel.deviceIds = @[];
         ruleModel.type = 2;
         [params addObject:ruleModel];
     }

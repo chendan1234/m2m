@@ -16,6 +16,7 @@
 #import <TYFoundationKit/TYFoundationKit.h>
 #import "NonomalDeviceView.h"
 #import "ArmInfoViewController.h"
+#import "ArmInfoModel.h"
 
 @interface HomeViewController ()<UIScrollViewDelegate,TuyaSecurityModeDelegate>
 @property (weak, nonatomic) IBOutlet UIView *navBgView;
@@ -85,7 +86,21 @@
     
     //iOS13以后, 要获取地图, 才可以获取到WiFi信息
     [self.locationManager requestWhenInUseAuthorization];
+    
+    [self getRecNoti];
+    
 }
+
+
+
+-(void)getRecNoti{
+    NSString *recNoti = [[NSUserDefaults standardUserDefaults] objectForKey:KRecNoti];
+    if ([recNoti isEqualToString:KRecNoti]) {
+        [self goToArmVC];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:KRecNoti];
+}
+
 
 -(void)changeIcon{
     CDAppUser *user = [CDAppUser getUser];
@@ -302,9 +317,6 @@
     }
 }
 
-
-
-
 -(void)navBtnClick:(UIButton *)sender{
     
     self.selectedBtn.enabled = YES;
@@ -468,16 +480,10 @@
 
 /// home open alarm  正在报警
 - (void)homeDidAlarm {
-    if (!self.isArming) {
-        self.isArming = YES;
-        ArmInfoViewController *armInfoVC = [[ArmInfoViewController alloc]init];
-        [armInfoVC setOverBlcok:^{
-            self.isArming = NO;
-        }];
-        armInfoVC.modalPresentationStyle = 0;
-        [self presentViewController:armInfoVC animated:YES completion:nil];
-    }
+    [self goToArmVC];
 }
+
+
 
 /// home calcel alarm  取消报警
 - (void)homeDidCancelAlarm {
@@ -686,7 +692,40 @@
 }
 
 
+-(void)goToArmVC{
+    
+    if (!self.isArming) {
+        NSMutableArray *armArr = [[NSMutableArray alloc]init];
+        [[TuyaSecurity new] getAlarmInfoWithHomeId:[CDHelper getHomeId] success:^(TuyaSecurityAlarmDetailModel * _Nonnull result) {
+            for (TuyaSecurityAlarmMessageModel *model in result.alarmMessages) {
+                ArmInfoModel *infoModel = [[ArmInfoModel alloc]init];
+                infoModel.createTime = model.gmtCreate;
+                infoModel.des = model.typeDesc;
+                infoModel.devId = [model.deviceIds firstObject];
+                [armArr addObject:infoModel];
+            }
+            
+            if (armArr.count) { //有数据 做跳转
+                [self sureToArmWith:armArr des:result.stateDescription];
+            }
+            
+        } failure:^(NSError * _Nonnull error) {
+            [self.view pv_failureLoading:error.description];
+        }];
+    }
+}
 
+-(void)sureToArmWith:(NSArray *)armArr des:(NSString *)des{
+    self.isArming = YES;
+    ArmInfoViewController *armInfoVC = [[ArmInfoViewController alloc]init];
+    [armInfoVC setOverBlcok:^{
+        self.isArming = NO;
+    }];
+    armInfoVC.dataArr = armArr;
+    armInfoVC.des = des;
+    armInfoVC.modalPresentationStyle = 0;
+    [self presentViewController:armInfoVC animated:YES completion:nil];
+}
 
 
 

@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void(^overBlcok)(void);
 
+@property (nonatomic, strong)NSArray *dataArr;
+
+@property (nonatomic, strong)NSString *des;
+
 @end
 
 NS_ASSUME_NONNULL_END

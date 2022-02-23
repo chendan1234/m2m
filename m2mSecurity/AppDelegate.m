@@ -14,6 +14,7 @@
 #import <UserNotifications/UserNotifications.h>
 
 #import "HomeViewController.h"
+#import "ArmInfoViewController.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -43,7 +44,7 @@
             self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CDLoginViewController alloc]init]];
         }
     }else{
-        self.window.rootViewController = [[NewFeatureViewController alloc]init];
+        self.window.rootViewController = [[NewFeatureViewController alloc] init];
     }
     [self.window makeKeyAndVisible];
     
@@ -55,8 +56,7 @@
 -(void)pushWith:(UIApplication *)application{
     [application registerForRemoteNotifications];
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
-
-
+    
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0) {
             //iOS10需要加下面这段代码。
             UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -76,10 +76,26 @@
     [TuyaSmartSDK sharedInstance].deviceToken = deviceToken;
 }
 
-
+// APP 在前后台都可以收到通知
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void(^)(UIBackgroundFetchResult))completionHandler {
-    NSLog(@"userInfo444--------%@",userInfo);
+    
+//    NSLog(@"userInfo999998-------%@",userInfo);
+    
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+        return;
+    }else{
+        NSInteger currentNumber = [UIApplication sharedApplication].applicationIconBadgeNumber;
+        currentNumber = currentNumber +1;
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:currentNumber];
+        [[NSUserDefaults standardUserDefaults] setObject:KRecNoti forKey:KRecNoti];
+    }
 }
+
+
+- (void)applicationWillResignActive:(UIApplication *)application{
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+
 
 
 

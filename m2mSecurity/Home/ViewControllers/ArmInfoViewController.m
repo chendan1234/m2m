@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLab;
 
-@property (nonatomic, strong)NSMutableArray *dataArr;
+//@property (nonatomic, strong)NSMutableArray *dataArr;
 
 @end
 
@@ -24,35 +24,52 @@ static NSString *cellID = @"cellID";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [CDHelper getColor:@"F01120"];
     
-    [self getArmInfo];
+    
+//    [self getArmInfo];
+    
+    
     
     [self setupUI];
     
-    [self setupAnimationWithColor:[UIColor redColor]];
+    
 }
 
 -(void)setupUI{
+    
+    self.view.backgroundColor = [CDHelper getColor:@"F01120"];
+    [self setupAnimationWithColor:[UIColor redColor]];
+    self.statusLab.text = self.des;
+    
     [self.myTableView registerNib:[UINib nibWithNibName:@"ArmInfoCell" bundle:nil] forCellReuseIdentifier:cellID];
     self.myTableView.rowHeight = 92;
+    [self.myTableView reloadData];
+    
 }
 
 -(void)getArmInfo{
-    self.dataArr = [[NSMutableArray alloc]init];
-    [[TuyaSecurity new] getAlarmInfoWithHomeId:[CDHelper getHomeId] success:^(TuyaSecurityAlarmDetailModel * _Nonnull result) {
-        self.statusLab.text = result.stateDescription;
-        for (TuyaSecurityAlarmMessageModel *model in result.alarmMessages) {
-            ArmInfoModel *infoModel = [[ArmInfoModel alloc]init];
-            infoModel.createTime = model.gmtCreate;
-            infoModel.des = model.typeDesc;
-            infoModel.devId = [model.deviceIds firstObject];
-            [self.dataArr addObject:infoModel];
-        }
-        [self.myTableView reloadData];
-    } failure:^(NSError * _Nonnull error) {
-        [self.view pv_failureLoading:error.description];
-    }];
+//    self.dataArr = [[NSMutableArray alloc]init];
+//    [[TuyaSecurity new] getAlarmInfoWithHomeId:[CDHelper getHomeId] success:^(TuyaSecurityAlarmDetailModel * _Nonnull result) {
+//        self.statusLab.text = result.stateDescription;
+//        for (TuyaSecurityAlarmMessageModel *model in result.alarmMessages) {
+//            ArmInfoModel *infoModel = [[ArmInfoModel alloc]init];
+//            infoModel.createTime = model.gmtCreate;
+//            infoModel.des = model.typeDesc;
+//            infoModel.devId = [model.deviceIds firstObject];
+//            [self.dataArr addObject:infoModel];
+//        }
+//
+//        if (self.dataArr.count) {
+//            [self.myTableView reloadData];
+//        }else{
+//            [self cancelArm];
+//        }
+//
+//    } failure:^(NSError * _Nonnull error) {
+//        [self.view pv_failureLoading:error.description];
+//    }];
+    
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -121,6 +138,10 @@ static NSString *cellID = @"cellID";
 
 //取消报警
 - (IBAction)cancel:(id)sender {
+    [self cancelArm];
+}
+
+-(void)cancelArm{
     [[TuyaSecurity new] cancelAlarmWithHomeId:[CDHelper getHomeId] action:TYHSGatewayStateCancelAlarm success:^(BOOL result) {
         if (result) {
             [self over];

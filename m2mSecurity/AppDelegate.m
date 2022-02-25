@@ -106,18 +106,6 @@
 // APP 在前后台都可以收到通知
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void(^)(UIBackgroundFetchResult))completionHandler {
     
-    NSLog(@"消息通知-------%@",userInfo);
-    
-//    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
-//        return;
-//    }else{
-//        self.tabberVC.selectedIndex = 1;
-//        NSInteger currentNumber = [UIApplication sharedApplication].applicationIconBadgeNumber;
-//        currentNumber = currentNumber +1;
-//        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:currentNumber];
-//        [[NSUserDefaults standardUserDefaults] setObject:userInfo[@"pushId"] forKey:KMeNoti];
-//    }
-    
     if ([userInfo objectForKey:@"pushId"]) {// 是自己的推送
         if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
             [[NSNotificationCenter defaultCenter] postNotificationName:KHaveNewNoti object:nil];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		021A150054AC379948FE1871 /* Pods_m2mSecurity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2F15146EACE2E0258424 /* Pods_m2mSecurity.framework */; };
+		0703476827C763F00050B6D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0703476727C763F00050B6D0 /* GoogleService-Info.plist */; };
 		07378B7F26F341D70088BFF3 /* DeviceShengGuangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378B7E26F341D60088BFF3 /* DeviceShengGuangView.m */; };
 		07378B8126F341E10088BFF3 /* DeviceShengGuangView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07378B8026F341E10088BFF3 /* DeviceShengGuangView.xib */; };
 		07378B8426F345B00088BFF3 /* DeviceWangGuanInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378B8326F345B00088BFF3 /* DeviceWangGuanInfoView.m */; };
@@ -321,6 +322,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0703476727C763F00050B6D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07378B7D26F341D60088BFF3 /* DeviceShengGuangView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceShengGuangView.h; sourceTree = "<group>"; };
 		07378B7E26F341D60088BFF3 /* DeviceShengGuangView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceShengGuangView.m; sourceTree = "<group>"; };
 		07378B8026F341E10088BFF3 /* DeviceShengGuangView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceShengGuangView.xib; sourceTree = "<group>"; };
@@ -867,6 +869,7 @@
 				07948F4326C39A0300B3D267 /* Assets.xcassets */,
 				07948F4526C39A0300B3D267 /* LaunchScreen.storyboard */,
 				07948F4826C39A0300B3D267 /* Info.plist */,
+				0703476727C763F00050B6D0 /* GoogleService-Info.plist */,
 				07948F4926C39A0300B3D267 /* main.m */,
 				07948F5726C3BFDA00B3D267 /* PrefixHeader.pch */,
 			);
@@ -1748,6 +1751,7 @@
 				0794903F26C4F49C00B3D267 /* pps_right_arrow@3x.png in Resources */,
 				07CD387B26CA55D000E8AE7B /* CDMineTopView.xib in Resources */,
 				0794C84426DCC44B00DA535C /* NetThreeView.xib in Resources */,
+				0703476827C763F00050B6D0 /* GoogleService-Info.plist in Resources */,
 				07CD382B26CA545B00E8AE7B /* CDLoginViewController.xib in Resources */,
 				0794905226C4F49C00B3D267 /* ty_camera_photo_icon@3x.png in Resources */,
 				0756963627449BA400D44A43 /* CDLanguage.strings in Resources */,

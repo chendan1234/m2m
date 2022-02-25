@@ -16,6 +16,10 @@ target 'm2mSecurity' do
   pod 'TuyaSmartDefaultPanelKit'
   
   
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  
+  
   
   
   

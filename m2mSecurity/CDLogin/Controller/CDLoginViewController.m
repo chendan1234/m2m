@@ -115,12 +115,30 @@
             self.loginData = result;
             [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"Bearer %@",self.loginData[@"data"][@"tokenId"]] forKey:KToken];
             [self tuYaPassword];
+            [self relationToPush];//关联设备去推送
         }else{
             [CDHelper dealWithPingTaiErrorWithVC:self result:result];
         }
     } failure:^(NSError *error) {
         [self.view pv_failureLoading:KNetWorkError];
     }];
+}
+
+//关联设备推送
+-(void)relationToPush{
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:KFcmToken];
+    if (token.length) {
+        NSMutableDictionary *parames = [NSMutableDictionary dictionary];
+        parames[@"deviceId"] = token;
+        parames[@"type"] = @"iOS";
+        
+        [HttpRequest sendPushDeviceId:parames success:^(id result) {
+            NSLog(@"关联设备推送----%@",result);
+        } failure:^(NSError *error) {
+            NSLog(@"关联设备推送error----%@",error);
+        }];
+    }
+    
 }
 
 //获取密码
@@ -222,7 +240,7 @@
 }
 
 
-    
+
 
 
 

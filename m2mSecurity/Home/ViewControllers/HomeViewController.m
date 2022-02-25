@@ -252,6 +252,9 @@
 
 //sos报警
 - (IBAction)sos:(id)sender {
+    
+    if (![self isEnableSecurity]) return;
+    
     [self.homeSecurity triggerAlarmWithHomeId:[CDHelper getHomeId]
                                alarmType:TYHSGatewaySOSPanic
                                  success:^(BOOL result) {
@@ -260,7 +263,7 @@
             [self.view pv_failureLoading:@"紧急报警失败"];
         }
     }
-                                 failure:^(NSError * _Nonnull error) {
+    failure:^(NSError * _Nonnull error) {
         //do something
         [self.view pv_failureLoading:error.description];
     }];
@@ -426,7 +429,7 @@
             /*onlineState
              0：初始化状态，可以理解为在线
              1：所有网关设备都在线
-             2： 部分网关设备在线
+             2：部分网关设备在线
              3：所有网关离线
              **/
             

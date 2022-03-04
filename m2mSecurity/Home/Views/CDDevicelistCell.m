@@ -25,7 +25,7 @@
     self.iconV.image = [UIImage imageNamed:[CDHelper getDeviceImageModel:model]];
     self.statusLab.text = model.isOnline?@"在线":@"离线";
     
-//    NSLog(@"---name = %@, devId = %@, productId = %@",model.name,model.devId,model.productId);
+    
     
     if (model.isShare) {
         self.shareLab.hidden = NO;

@@ -98,6 +98,9 @@
     __weak typeof(self) weakSelf = self;
     [self.deviceShare addDeviceShareWithRequestModel:shareModel success:^(TuyaSmartShareMemberModel *model) {
         [weakSelf.view pv_successLoading:@"共享成功!"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:YES];
+        });
     } failure:^(NSError *error) {
         [weakSelf.view pv_failureLoading:error.localizedDescription];
     }];

@@ -35,7 +35,6 @@ static NSString *cellID = @"cellID";
 }
 
 -(void)getMeNoti{
-    NSLog(@"ttttt0000");
     NSString *pushId = [[NSUserDefaults standardUserDefaults] objectForKey:KMeNoti];
     if (pushId.length) {
         MessageDetailViewController *detailVC = [[MessageDetailViewController alloc] init];

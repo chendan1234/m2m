@@ -99,8 +99,7 @@
         model.serviceDay = self.model.life;
         model.money = self.model.money * 100;
         
-        NSDictionary *dic = [CDHelper jsonToDic:self.model.payment];
-        model.paymentIntentClientSecret = dic[@"clientSecret"];
+        model.paymentIntentClientSecret = self.model.payment;
         
         CDPayViewController *payVC = [[CDPayViewController alloc]init];
         payVC.model = model;

@@ -106,15 +106,17 @@
 // APP 在前后台都可以收到通知
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void(^)(UIBackgroundFetchResult))completionHandler {
     
+    NSLog(@"推送消息 --- %@",userInfo);
+    
     if ([userInfo objectForKey:@"pushId"]) {// 是自己的推送
         if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
             [[NSNotificationCenter defaultCenter] postNotificationName:KHaveNewNoti object:nil];
             return;
         }else{
             self.tabberVC.selectedIndex = 1;
-            NSInteger currentNumber = [UIApplication sharedApplication].applicationIconBadgeNumber;
-            currentNumber = currentNumber +1;
-            [[UIApplication sharedApplication] setApplicationIconBadgeNumber:currentNumber];
+//            NSInteger currentNumber = [UIApplication sharedApplication].applicationIconBadgeNumber;
+//            currentNumber = currentNumber +1;
+//            [[UIApplication sharedApplication] setApplicationIconBadgeNumber:currentNumber];
             [[NSUserDefaults standardUserDefaults] setObject:userInfo[@"pushId"] forKey:KMeNoti];
         }
 
@@ -122,9 +124,9 @@
         if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
             return;
         }else{
-            NSInteger currentNumber = [UIApplication sharedApplication].applicationIconBadgeNumber;
-            currentNumber = currentNumber +1;
-            [[UIApplication sharedApplication] setApplicationIconBadgeNumber:currentNumber];
+//            NSInteger currentNumber = [UIApplication sharedApplication].applicationIconBadgeNumber;
+//            currentNumber = currentNumber +1;
+//            [[UIApplication sharedApplication] setApplicationIconBadgeNumber:currentNumber];
             [[NSUserDefaults standardUserDefaults] setObject:KRecNoti forKey:KRecNoti];
         }
     }

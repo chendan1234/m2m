@@ -61,8 +61,6 @@
     
     [self setupCongi];
     [self setupUI];
-    
-    
 }
 
 -(void)setupCongi{
@@ -221,9 +219,6 @@
     }else{//快连
         [[TuyaSmartActivator sharedInstance] startConfigWiFi:TYActivatorModeEZ ssid:ssid password:password token:self.token timeout:100];
     }
-    
-    
-    
 }
 
 

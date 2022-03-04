@@ -678,7 +678,7 @@
 +(NSInteger)getDeviceCategoryWithModel:(TuyaSmartDeviceModel *)model{
     if ([model.productId isEqualToString:@"7zkjofkrlff3yxlv"]) {//烟感
         return DeviceCategroyCDYanGan;
-    }else if ([model.productId isEqualToString:@"h6brxbdbw4wsot96"] || [model.productId isEqualToString:@"dlffgowcxktqh5oj"]){//视频
+    }else if ([model.productId isEqualToString:@"h6brxbdbw4wsot96"] || [model.productId isEqualToString:@"dlffgowcxktqh5oj"] || [model.productId isEqualToString:@"zqc6ufv4naw3mjhv"]){//视频
         return DeviceCategroyCDShiPing;
     }else if ([model.productId isEqualToString:@"zhyza6vd"] || [model.productId isEqualToString:@"bwoihqun"]) {//门磁
         return DeviceCategroyCDMenChi;

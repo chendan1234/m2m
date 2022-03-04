@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		021A150054AC379948FE1871 /* Pods_m2mSecurity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2F15146EACE2E0258424 /* Pods_m2mSecurity.framework */; };
 		0703476827C763F00050B6D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0703476727C763F00050B6D0 /* GoogleService-Info.plist */; };
+		0703476F27D0B3420050B6D0 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0703476D27D0B3420050B6D0 /* AboutUsViewController.m */; };
+		0703477027D0B3420050B6D0 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0703476E27D0B3420050B6D0 /* AboutUsViewController.xib */; };
 		07378B7F26F341D70088BFF3 /* DeviceShengGuangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378B7E26F341D60088BFF3 /* DeviceShengGuangView.m */; };
 		07378B8126F341E10088BFF3 /* DeviceShengGuangView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07378B8026F341E10088BFF3 /* DeviceShengGuangView.xib */; };
 		07378B8426F345B00088BFF3 /* DeviceWangGuanInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07378B8326F345B00088BFF3 /* DeviceWangGuanInfoView.m */; };
@@ -323,6 +325,9 @@
 
 /* Begin PBXFileReference section */
 		0703476727C763F00050B6D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0703476C27D0B3420050B6D0 /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		0703476D27D0B3420050B6D0 /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		0703476E27D0B3420050B6D0 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		07378B7D26F341D60088BFF3 /* DeviceShengGuangView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceShengGuangView.h; sourceTree = "<group>"; };
 		07378B7E26F341D60088BFF3 /* DeviceShengGuangView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceShengGuangView.m; sourceTree = "<group>"; };
 		07378B8026F341E10088BFF3 /* DeviceShengGuangView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceShengGuangView.xib; sourceTree = "<group>"; };
@@ -1548,6 +1553,9 @@
 				07CD390626CE413500E8AE7B /* SelectUserShareViewController.h */,
 				07CD390726CE413500E8AE7B /* SelectUserShareViewController.m */,
 				07CD390826CE413500E8AE7B /* SelectUserShareViewController.xib */,
+				0703476C27D0B3420050B6D0 /* AboutUsViewController.h */,
+				0703476D27D0B3420050B6D0 /* AboutUsViewController.m */,
+				0703476E27D0B3420050B6D0 /* AboutUsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1781,6 +1789,7 @@
 				07CD382A26CA545B00E8AE7B /* CDRegisterViewController.xib in Resources */,
 				07948F4426C39A0300B3D267 /* Assets.xcassets in Resources */,
 				0794904526C4F49C00B3D267 /* ty_camera_tool_play_normal@2x.png in Resources */,
+				0703477027D0B3420050B6D0 /* AboutUsViewController.xib in Resources */,
 				07CD387C26CA55D000E8AE7B /* CDChangePhoneOrEmailView.xib in Resources */,
 				0757DB2326E1BA1300F7AB97 /* NetApView.xib in Resources */,
 				0794C86D26DDD21A00DA535C /* AddDeviceSuccessViewController.xib in Resources */,
@@ -2003,6 +2012,7 @@
 				07CD38AE26CB889400E8AE7B /* CDQuickViewController.m in Sources */,
 				07C51A962797A1E800DA91E8 /* NonomalDeviceView.m in Sources */,
 				07CD387326CA55D000E8AE7B /* CDChangePhoneOrEmailView.m in Sources */,
+				0703476F27D0B3420050B6D0 /* AboutUsViewController.m in Sources */,
 				0757DB3F26E5FD2000F7AB97 /* MoreShareDeviceModel.m in Sources */,
 				07CD382726CA545B00E8AE7B /* CDRegisterViewController.m in Sources */,
 				0757DB2126E1BA0400F7AB97 /* NetApView.m in Sources */,

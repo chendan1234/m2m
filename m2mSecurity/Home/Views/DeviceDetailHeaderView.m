@@ -39,8 +39,6 @@
     
     self.dic = model.dps;
     
-//    NSLog(@"---dps = %@",model.dps);
-    
     switch ([CDHelper getDeviceCategoryWithModel:model]) {
         case DeviceCategroyCDYanGan://烟感
             [self yanGan];
@@ -65,6 +63,10 @@
             break;
         default:
             break;
+    }
+    
+    if (!model.isOnline) {
+        [self setupAnimationWithImage:@"lixian" color:[UIColor lightGrayColor]];
     }
 }
 
@@ -114,30 +116,28 @@
 //遥控
 -(void)yaoKong{
     
-    NSLog(@"遥控----%@",self.dic);
-    
     self.otherH.constant = 0.0;
     self.dianLab.text = [NSString stringWithFormat:@"%@%%",self.dic[@"3"]]; //电量
     
-    if ([self.dic[@"29"] isEqual:@"sos"]) {//报警
-        [self setupAnimationWithImage:@"baojing" color:KDeviceRed];
-        return;
-    }
-    
-    if ([self.dic[@"28"] isEqual:@"home"]) {//报警
-        [self setupAnimationWithImage:@"athome" color:KDeviceBlue];
-        return;
-    }
-    
-    if ([self.dic[@"27"] isEqual:@"arm"]) {//在外布防
-        [self setupAnimationWithImage:@"outside" color:KColorA(25, 175, 125, 1)];
-        return;
-    }
-    
-    if ([self.dic[@"26"] isEqual:@"disarmed"]) {//撤防
-        [self setupAnimationWithImage:@"che" color:KColorA(219, 153, 55, 1)];
-        return;
-    }
+//    if ([self.dic[@"29"] isEqual:@"sos"]) {//报警
+//        [self setupAnimationWithImage:@"baojing" color:KDeviceRed];
+//        return;
+//    }
+//
+//    if ([self.dic[@"28"] isEqual:@"home"]) {//报警
+//        [self setupAnimationWithImage:@"athome" color:KDeviceBlue];
+//        return;
+//    }
+//
+//    if ([self.dic[@"27"] isEqual:@"arm"]) {//在外布防
+//        [self setupAnimationWithImage:@"outside" color:KColorA(25, 175, 125, 1)];
+//        return;
+//    }
+//
+//    if ([self.dic[@"26"] isEqual:@"disarmed"]) {//撤防
+//        [self setupAnimationWithImage:@"che" color:KColorA(219, 153, 55, 1)];
+//        return;
+//    }
     
     if ([self.dic[@"3"] intValue] <= 10 ) {//低电量
         [self setupAnimationWithImage:@"lowDian" color:KDeviceRed];
@@ -203,16 +203,13 @@
 
 //sos
 -(void)sos{
-    
-    NSLog(@"sos----%@",self.dic);
-    
     self.otherH.constant = 0.0;
     self.dianLab.text = [NSString stringWithFormat:@"%@%%",self.dic[@"3"]];
     
-    if ([self.dic[@"29"] isEqual:@"sos"]) {//水侵报警
-        [self setupAnimationWithImage:@"baojing" color:KDeviceRed];
-        return;
-    }
+//    if ([self.dic[@"29"] isEqual:@"sos"]) {//水侵报警
+//        [self setupAnimationWithImage:@"baojing" color:KDeviceRed];
+//        return;
+//    }
     
     if ([self.dic[@"3"] intValue] <= 10) {//电量
         [self setupAnimationWithImage:@"lowDian" color:KDeviceRed];

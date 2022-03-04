@@ -43,6 +43,7 @@ static NSString *cellID = @"cellID";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NonomalDeviceSubCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.devId = self.dataArr[indexPath.row];
     return cell;
 }
 

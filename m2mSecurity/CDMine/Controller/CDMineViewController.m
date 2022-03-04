@@ -18,6 +18,7 @@
 #import "CDOrderViewController.h"
 #import "CDSubscribeViewController.h"
 #import "ShareViewController.h"
+#import "AboutUsViewController.h"
 
 #import "Home.h"
 
@@ -146,6 +147,12 @@ static NSString *cellID = @"cellID";
         {
             CDOrderViewController *orderVC = [[CDOrderViewController alloc]init];
             [self.navigationController pushViewController:orderVC animated:YES];
+        }
+            break;
+        case 7://关于我们
+        {
+            AboutUsViewController *aboutVC = [[AboutUsViewController alloc]init];
+            [self.navigationController pushViewController:aboutVC animated:YES];
         }
             break;
         default:

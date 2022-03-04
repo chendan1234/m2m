@@ -96,33 +96,37 @@
 -(void)yaoKong{
     if ([self.model.dpId isEqual:@"3"]) {
         [self setDianLiang];
-    }else if([self.model.dpId isEqual:@"26"]){
-        if ([self.model.value isEqual:@"disarmed"]) {
-            [self nonomal];
-        }else{
-            [self nomal];
-        }
-    }else if([self.model.dpId isEqual:@"27"]){
-        if ([self.model.value isEqual:@"arm"]) {
-            [self nonomal];
-        }else{
-            [self nomal];
-        }
-    }else if([self.model.dpId isEqual:@"28"]){
-        if ([self.model.value isEqual:@"home"]) {
-            [self nonomal];
-        }else{
-            [self nomal];
-        }
-    }else if([self.model.dpId isEqual:@"29"]){
-        if ([self.model.value isEqual:@"sos"]) {
-            [self nonomal];
-        }else{
-            [self nomal];
-        }
     }else{
         [self nomal];
     }
+    
+//    else if([self.model.dpId isEqual:@"26"]){
+//        if ([self.model.value isEqual:@"disarmed"]) {
+//            [self nonomal];
+//        }else{
+//            [self nomal];
+//        }
+//    }else if([self.model.dpId isEqual:@"27"]){
+//        if ([self.model.value isEqual:@"arm"]) {
+//            [self nonomal];
+//        }else{
+//            [self nomal];
+//        }
+//    }else if([self.model.dpId isEqual:@"28"]){
+//        if ([self.model.value isEqual:@"home"]) {
+//            [self nonomal];
+//        }else{
+//            [self nomal];
+//        }
+//    }else if([self.model.dpId isEqual:@"29"]){
+//        if ([self.model.value isEqual:@"sos"]) {
+//            [self nonomal];
+//        }else{
+//            [self nomal];
+//        }
+//    }
+    
+    
 }
 
 //声光
@@ -176,13 +180,15 @@
 
 //紧急按钮
 -(void)sos{
-    if ([self.model.dpId isEqual:@"29"]) {
-        if ([self.model.value isEqual:@"sos"]) {
-            [self nonomal];
-        }else{
-            [self nomal];
-        }
-    }else if([self.model.dpId isEqual:@"3"]){
+//    if ([self.model.dpId isEqual:@"29"]) {
+//        if ([self.model.value isEqual:@"sos"]) {
+//            [self nonomal];
+//        }else{
+//            [self nomal];
+//        }
+//    }else
+        
+    if([self.model.dpId isEqual:@"3"]){
         [self setDianLiang];
     }else{
         [self nomal];

@@ -95,11 +95,6 @@
 
 //订阅
 - (IBAction)subscribe:(id)sender {
-    [self startCheckout];
-}
-
-- (void)startCheckout {
-    
     CDSubscribeModel *model = self.dataArr[self.selectedBtn.tag];
     [CDHelper createOrderWithVC:self model:model];
 }

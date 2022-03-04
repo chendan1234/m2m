@@ -177,7 +177,6 @@ static NSString *rightCellID = @"rightCellID";
                 break;
             case 4:
             {
-                
                 TuyaSmartDeviceModel *wangGuanModel = [CDHelper getWangGuanModel];
                 if (wangGuanModel) {
                     AddDeviceZigbeeViewController *netVC = [[AddDeviceZigbeeViewController alloc]init];
